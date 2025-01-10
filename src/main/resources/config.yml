@@ -1,0 +1,56 @@
+database:
+  type: "SQLITE" # SQLITE, MYSQL, or MONGODB
+  filename: "punishments.db"
+  host: "localhost"
+  port: 3306
+  database: "punishments"
+  username: "user"
+  password: "password"
+  ssl: false
+  connectionString: "mongodb://user:password@host:port/?authSource=admin&replicaSet=myReplicaSet&w=majority&readPreference=primaryPreferred&retryWrites=true"
+  databaseName: "punishments"
+  collectionName: "punishments"
+
+history_menu:
+  title: "&8Punishment History for %player%"
+  no_punishments_message: "&cNo Punishments Found"
+  item_display:
+    material: "PAPER"
+    name: "&6%type%"
+    lore:
+      - "&7Punisher: &f%punisher%"
+      - "&7Reason: &f%reason%"
+      - "&7Date: &f%date%"
+      - "&7Expiry: &f%expiry%"
+messages:
+
+  # General Messages
+  prefix: "&7[&cPunishments&7] " # Plugin prefix
+  no_permission: "&cYou do not have permission to use this command."
+  self_target: "&cYou cannot target yourself with this command."
+  invalid_duration: "&cInvalid duration format. Use formats like 1s, 1m, 1h, 1d, 1w, 1mo, 1y."
+  punishment_removed: "&a{punishment} removed from &e{player}&a."
+  punishment_applied: "&a{punishment} applied to &e{player}&a for {duration}."
+  public_notification: "&e{player} &7was {action} by a staff member."
+
+  # Ban Messages
+  ban:
+    banned: "&cYou have been banned from this server.\n&7Reason: &f{reason}\n&7Expires: &f{expiry}"
+    ip_banned: "&cYour IP address has been banned from this server.\n&7Reason: &f{reason}\n&7Expires: &f{expiry}"
+    unbanned: "&aPlayer &e{player} &ahas been unbanned."
+    ip_unbanned: "&aIP address &e{ip} &ahas been unbanned."
+
+  # Mute Messages
+  mute:
+    muted: "&cYou have been muted. You cannot chat.\n&7Reason: &f{reason}\n&7Expires: &f{expiry}"
+    unmuted: "&aPlayer &e{player} &ahas been unmuted."
+
+  # Placeholders:
+  # {player} - The target player's name
+  # {staff} - The staff member's name
+  # {reason} - The reason for the punishment
+  # {duration} - The duration of the punishment
+  # {expiry} - The expiry date of the punishment
+  # {date} - The date of the warning
+  # {punishment} - The Capitalized Punishment name (e.g. Ban, Mute, Warn)
+  # {action} - The action taken (e.g. banned, muted, warned)

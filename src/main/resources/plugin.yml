@@ -1,0 +1,57 @@
+name: mPunishments
+version: 1.0.0
+main: org.monxef.mpunishments.MPunishments
+description: A comprehensive punishment plugin.
+api-version: 1.13
+authors: [Monxef]
+
+commands:
+  ban:
+    description: Bans a player.
+    usage: /ban <player> [reason]
+    permission: mpunishments.ban
+  tempban:
+    description: Temporarily bans a player.
+    usage: /tempban <player> <duration> [reason]
+    permission: mpunishments.tempban
+  mute:
+    description: Mutes a player.
+    usage: /mute <player> [reason]
+    permission: mpunishments.mute
+  tempmute:
+    description: Temporarily mutes a player.
+    usage: /tempmute <player> <duration> [reason]
+    permission: mpunishments.tempmute
+  unban:
+    description: Unbans a player.
+    usage: /unban <player>
+    permission: mpunishments.unban
+  unmute:
+    description: Unmutes a player.
+    usage: /unmute <player>
+    permission: mpunishments.unmute
+  ipban:
+    description: Bans an IP address.
+    usage: /ipban <player/ip> [reason]
+    permission: mpunishments.ipban
+  punishmenthistory:
+    description: Shows the punishment history of a player.
+    usage: /punishmenthistory <player>
+    permission: mpunishments.history
+
+permissions:
+  mpunishments.ban:
+    description: Allows the use of the /ban command.
+    default: op
+  mpunishments.tempban:
+    description: Allows the use of the /tempban command.
+    default: op
+  mpunishments.mute:
+    description: Allows the use of the /mute command.
+    default: op
+  mpunishments.tempmute:
+    description: Allows the use of the /tempmute command.
+    default: op
+  mpunishments.unban:
+    description: Allows the use of the /unban command.
+    default: op
